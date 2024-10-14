@@ -1,0 +1,154 @@
+body {
+    font-family: Verdana; /* sets the font for the body text to Verdana  */
+    margin: 0; /* removes margin around the body */ 
+    padding: 0; /* removes padding around the body */
+    background-color: #f0f8f0; /* sets the background to a light color */
+    color: #333; /* sets the color text to dark grey */
+}
+header {
+    display: flex; /* uses flexbox for the headers */
+    justify-content: space-between; /* spaces items evenly */
+    align-items: center; /* centers items in the header */
+    background-color:#4CAF50; /* sets background color to faded green */
+    color: #fff; /* sets text color to white */
+    padding: 20px; /* adds padding of 20px inside the header */
+}
+.logo img { /* At the html document I have added a class="logo" in the img command and ".logo" refers to that */
+    height: 150px; /* sets the height of the logo image */
+    width: 150px; /* sets the width of the logo image */
+}
+nav ul {
+    list-style: none; /* removes bullet points from the list */
+    display: flex; /* display list items horizontally */
+    padding: 0%; /* removes padding */
+    margin: 0%; /* removes margin */
+}
+nav ul li {
+    margin: 0 15px; /* adds space between list items */
+}
+nav ul li a {
+    color: #fff; /* colors text white for the anchors */
+    text-decoration: none; /* removes underline from the anchors */
+}
+nav ul li a:hover {
+    text-decoration: underline; /* underlines links/anchors on hover */
+}
+.slogan { /* At the html document I have added a class="slogan" in the "blockquote" command and ".slogan" refers to that */
+    text-align: center; /* centers the .slogan text */
+    font-size: 24px; /* sets the font size for the .slogan to 24px */
+    font-style: italic; /* makes the .slogan text italic */
+    margin: 0 20px; /* adds space at the left and right elements (horizontal) */
+}
+.websiteinfo { /* At the html document I have added a class="websiteinfo" in the "article" command inside "main" and ".websiteinfo" refers to that */
+    background-color: #fff; /* sets background color to white */
+    border: 1px solid lightgrey; /* light grey border around the box */
+    padding: 20px; /* adds padding of 20px inside the box */
+    border-radius: 10px; /* makes the corners of the box look rounded */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* adds some shadow for depth */
+}
+h2 {
+    color: black; /* sets the color of headings to black */
+}
+.description { /* At the html document I have added a class="description" inside "h2" inside "article" inside "main" command and ".description" refers to that */
+    display: flex; /* uses flexbox for the description items */
+    align-items: center; /* centers items in the description */
+    justify-content: space-between; /* spaces evenly the items */
+}
+p {
+    color: black; /* sets paragraph text color to black */
+    flex: 1; /* the element grows relatively to other items in the same container */
+    margin-right: 20px; /* adds space on the right for the button */
+}
+button {
+    background-color:#4CAF50; /* sets button's background color to faded green */
+    color: white; /* solor text white */
+    border: none; /* removes border from button */
+    padding: 10px 20px; /* adds padding inside buttons */
+    border-radius: 5px; /* makes corners look rounded */
+    cursor: pointer; /* changes cursor to pointer on hover */
+}
+#Latestreleases #trending { 
+    background-color: #eaeaea; /* Light grey background for latestreleases and trending sections */
+    padding: 20px; /* adds padding inside the sections */
+    border-radius: 8px; /* makes corners look rounded */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* add shadow for depth */
+}
+h2 {
+    color: black; /* colors text of headers to black */
+    text-align: center; /* centers h2 headings */
+}
+
+.releases { /* At the html document I have added a class="releases" in the ul command and ".releases" refers to that */
+    list-style-type: none; /* removes bullets from list items */
+    padding: 0; /* removes padding */
+    display: flex; /* display list items horizontally */
+    justify-content: space-around; /* spaces items evenly */
+}
+
+.sneakes { /* At the html document I have added a class="sneakes" in the li command and ".sneakes" refers to that */
+    margin: 10px; /* adds margin around each sneaker box */
+    text-align: center; /* centers text inside the boxes */
+    background-color: white; /* sets background color to white */
+    border: 1px solid #ccc; /* light grey border around boxes */
+    border-radius: 8px; /* makes corners look rounded */
+    padding: 10px; /* adds padding inside boxes */
+    width: 250px; /* sets a fixed width for uniformity in order every box to look the same */
+}
+
+.sneaks { /* At the html document I have added a class="sneaks" in the img command and ".sneaks" refers to that */
+    max-width: 100%; /* limits the image width to 100% of its container */
+    height: auto; /* aspect ratio of images */
+    border-radius: 5px; /* make corners look rounded */
+}
+
+p {
+    color: black; /* set paragraph text to black */
+}
+footer {
+    background-color: #4CAF50; /* sets footer background to faded green */
+    color: white; /* sets footer color text to white */
+    text-align: center; /* centers text in footer */
+    padding: 20px; /* adds padding of 20px inside the footer */
+}
+
+footer img {
+    height: 100px; /* sets height of footer image */
+    width: 100px;  /* sets width of footer image */
+}
+.form-box { /* At the html document I have added a class="form-box" inside every section's form and ".form" refers to that */
+    background-color: white; /* sets background to white for the forms */
+    border: 2px solid #4CAF50; /* sets border color to green */
+    border-radius: 8px; /* make corners lokk rounded */
+    padding: 15px; /* adds padding inside the forms */ 
+    margin: 20px auto; /* centers the forms */
+    width: 300px; /* fixed width for form boxes so every form looks similar to each other */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* add shadow */
+}
+
+.formation { /* At the html document I have added a class="formation" inside every section's label and ".formation" refers to that */
+    display: block; /* display element as a block element */
+    margin: 10px 0 5px; /* 10 pixels of space above the element, no space on the sides, and 5 pixels of space below it */
+}
+
+input[type="text"],
+input[type="email"],
+textarea,
+select {
+    padding: 10px; /* adds padding inside inputs */
+    border: 1px solid #ccc; /* light grey border around inputs */
+    border-radius: 4px; /* makes corners of inputs look rounded */
+    margin-bottom: 10px; /* adds space below inputs  */
+}
+
+.submission { /* At the html document I have added a class="submission" inside every button command at the contact.html because there is button command at the index.html as well and ".submission" refers to that */
+    background-color: #4CAF50; /* green submit button */
+    color: white; /* text color white */
+    padding: 10px 15px; /* adds padding inside button */
+    border-radius: 4px; /* make corners look rounded */
+    cursor: pointer; /* changes cursor to pointer when hover */
+    width: 100%; /* takes the full width available to it */
+}
+
+button:hover {
+    background-color: #45a049; /* Darker green color on hover */
+}
