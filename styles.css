@@ -9,7 +9,7 @@ header {
     display: flex; /* uses flexbox for the headers */
     justify-content: space-between; /* spaces items evenly */
     align-items: center; /* centers items in the header */
-    background-color:#4CAF50; /* sets background color to faded green */
+    background-color:#2E7D32; /* sets background color to faded green */
     color: #fff; /* sets text color to white */
     padding: 20px; /* adds padding of 20px inside the header */
 }
@@ -17,27 +17,39 @@ header {
     height: 150px; /* sets the height of the logo image */
     width: 150px; /* sets the width of the logo image */
 }
-nav ul {
+.navbar {
     list-style: none; /* removes bullet points from the list */
     display: flex; /* display list items horizontally */
     padding: 0%; /* removes padding */
     margin: 0%; /* removes margin */
 }
 nav ul li {
-    margin: 0 15px; /* adds space between list items */
+    margin: 0 40px; /* adds space between list items */
+    
 }
 nav ul li a {
     color: #fff; /* colors text white for the anchors */
     text-decoration: none; /* removes underline from the anchors */
+    font-weight: bold;
+    font-size: 16px;
 }
 nav ul li a:hover {
     text-decoration: underline; /* underlines links/anchors on hover */
+    color: gold; /* Gold color on hover for a more noticeable effect */
+
 }
 .slogan { /* At the html document I have added a class="slogan" in the "blockquote" command and ".slogan" refers to that */
     text-align: center; /* centers the .slogan text */
     font-size: 24px; /* sets the font size for the .slogan to 24px */
     font-style: italic; /* makes the .slogan text italic */
+    font-weight: bold;
     margin: 0 20px; /* adds space at the left and right elements (horizontal) */
+    animation: blockquoteMovement 2s ease-in-out infinite;
+}
+@keyframes blockquoteMovement {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
 }
 .websiteinfo { /* At the html document I have added a class="websiteinfo" in the "article" command inside "main" and ".websiteinfo" refers to that */
     background-color: #fff; /* sets background color to white */
@@ -60,12 +72,19 @@ p {
     margin-right: 20px; /* adds space on the right for the button */
 }
 button {
-    background-color:#4CAF50; /* sets button's background color to faded green */
+    background-color:#2E7D32; /* sets button's background color to faded green */
     color: white; /* solor text white */
     border: none; /* removes border from button */
     padding: 10px 20px; /* adds padding inside buttons */
     border-radius: 5px; /* makes corners look rounded */
     cursor: pointer; /* changes cursor to pointer on hover */
+    animation: buttonMovement 1s ease-in-out infinite;
+    transition: background-color 0.3s; /* Optional for hover effect */
+}
+@keyframes buttonMovement {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
 }
 #Latestreleases #trending { 
     background-color: #eaeaea; /* Light grey background for latestreleases and trending sections */
@@ -105,19 +124,31 @@ p {
     color: black; /* set paragraph text to black */
 }
 footer {
-    background-color: #4CAF50; /* sets footer background to faded green */
-    color: white; /* sets footer color text to white */
-    text-align: center; /* centers text in footer */
-    padding: 20px; /* adds padding of 20px inside the footer */
+    background-color: #2E7D32; /* darker green for better contrast */
+    color: white; /* keep text white for contrast */
+    text-align: center;
+    padding: 20px;
 }
 
 footer img {
-    height: 100px; /* sets height of footer image */
-    width: 100px;  /* sets width of footer image */
+    height: 100px;
+    width: 100px;
+}
+
+footer a {
+    color: white; /* Ensure links are white */
+    text-decoration: none; /* Remove underline */
+}
+
+footer a:focus,
+footer a:hover {
+
+    text-decoration: underline; /* underlines links/anchors on hover */
+    color: gold; /* Gold color on hover for a more noticeable effect */
 }
 .form-box { /* At the html document I have added a class="form-box" inside every section's form and ".form" refers to that */
     background-color: white; /* sets background to white for the forms */
-    border: 2px solid #4CAF50; /* sets border color to green */
+    border: 2px solid #2E7D32; /* sets border color to green */
     border-radius: 8px; /* make corners lokk rounded */
     padding: 15px; /* adds padding inside the forms */ 
     margin: 20px auto; /* centers the forms */
@@ -140,8 +171,9 @@ select {
     margin-bottom: 10px; /* adds space below inputs  */
 }
 
+
 .submission { /* At the html document I have added a class="submission" inside every button command at the contact.html because there is button command at the index.html as well and ".submission" refers to that */
-    background-color: #4CAF50; /* green submit button */
+    background-color: #2E7D32; /* green submit button */
     color: white; /* text color white */
     padding: 10px 15px; /* adds padding inside button */
     border-radius: 4px; /* make corners look rounded */
@@ -152,3 +184,103 @@ select {
 button:hover {
     background-color: #45a049; /* Darker green color on hover */
 }
+li a:hover, .dropdown:hover .dropbtn {
+    background-color: darkgreen;
+  }
+  li.dropdown {
+    display: inline-block;
+  }
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .dropdown-content a:hover {background-color: #f1f1f1;}
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+.communication {
+    display: flex;
+    justify-content: space-between; /* Space out the sections */
+    margin: 20px; /* Optional: Adds margin around the main section */
+}
+html {
+    scroll-behavior: smooth;
+}
+/* Style for the modal (popup) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 60px; /* Position the modal at the top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.9); /* Black with some opacity */
+  }
+  
+  /* Modal content (image) */
+  .modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+  }
+  
+  /* Caption under the image */
+  #caption {
+    text-align: center;
+    color: #ccc;
+    font-size: 20px;
+    padding: 10px;
+  }
+  
+  /* Close button (x) */
+  .close {
+    color: #fff;
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  /* Style for image gallery */
+  .releases {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Grid layout for responsiveness */
+    gap: 20px;
+  }
+  
+  .sneakes img {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out; /* Smooth zoom effect */
+  }
+  
+  .sneakes img:hover {
+    transform: scale(1.1); /* Enlarge the image slightly when hovered */
+  }

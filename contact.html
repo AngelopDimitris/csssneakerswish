@@ -25,10 +25,16 @@
             <h1>The SneakerSwish</h1>
         </div>
         <nav>
-            <ul>
+            <ul class="navbar">
                 <li><a href="index.html" class="homepage">Home</a></li>
-                <li><a href="collections.html" class="collectionspage">Collections</a>
-                <li><a href="#contact.html" class="contactpage">Contact Us</a></li>
+                    <li class="dropdown">
+                        <a href="collections.html" class="dropbtn">Collections</a>
+                        <div class="dropdown-content">
+                            <a href="collections.html">Basketball Shoes</a>
+                            <a href="collections.html#LifestyleSneakers">Lifestyle Sneakers</a>
+                        </div>
+                    </li>
+                <li><a href="contact.html" class="contactpage">Contact Us</a></li>
                 <li><a href="contact.html" class="SignUpbutton">Sign Up </a></li>
             </ul>
         </nav>
@@ -36,12 +42,12 @@
             <p>"The Swishiest Sneakers"</p>
         </blockquote>
     </header>
-    <main>
-    <h2>Contact Us</h2>
+    <main class="communication">
+    <h2 class="heads">Let's keep in touch</h2>
     <section>
     <div class="form-box">
     <h3>Feedback Form</h3>
-    <form action="#" method="post">
+    <form action="#" method="post" id="feedbackForm">
     <label for="first-name" class="formation">First Name:</label>
     <input type="text" id="first-name" name="first-name" required>
 
@@ -66,7 +72,7 @@
         <section>
             <div class="form-box">
             <h3>Contact Us</h3>
-            <form action="#" method="post">
+            <form action="#" method="post" id="contactForm">
                 <label for="first-name" class="formation">First Name:</label>
                 <input type="text" id="first-name" name="first-name" required>
             
@@ -85,7 +91,7 @@
         <section>
             <div class="form-box">
     <h3>Sign Up</h3>
-    <form action="#" method="post">
+    <form action="#" method="post" id="signUpForm">
     <label for="first-name" class="formation">First Name:</label>
     <input type="text" id="first-name" name="first-name" required>
 
@@ -100,6 +106,29 @@
         </section>
     </main>
     <footer>
+        <div class="contact-section">
+            <h2>Contact Us</h2>
+            <p>If you have any questions or want to get in touch, feel free to connect with us on social media!</p>
+            
+            <div class="social-icons">
+                <!-- Instagram -->
+                <a href="https://www.instagram.com" target="_blank" title="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <!-- Facebook -->
+                <a href="https://www.facebook.com" target="_blank" title="Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <!-- TikTok -->
+                <a href="https://www.tiktok.com" target="_blank" title="TikTok">
+                    <i class="fab fa-tiktok"></i>
+                </a>
+                <!-- Twitter -->
+                <a href="https://www.twitter.com" target="_blank" title="Twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </div>
+        </div>
         <div>
             <img src="Images/SNEAKERSlogo.png" height="150" width="150" alt="sneakerswishlogo">
             <h1>The SneakerSwish</h1> 
@@ -118,5 +147,64 @@
         <p>&copy; 2024 The SneakerSwish</p>
         <p>Website: <a href="index.html">SneakerSwish.com</a></p>
     </footer>
+    <script>
+        // Form Validation Function
+        function validateForm(formId) {
+            var form = document.getElementById(formId);
+            var isValid = true;
+        
+            // Get all input fields in the form
+            var inputs = form.querySelectorAll('input, select, textarea');
+        
+            // Iterate over all fields and check if they are valid
+            inputs.forEach(function(input) {
+                // Check if the input field is required and empty
+                if (input.required && input.value.trim() === '') {
+                    isValid = false;
+                    input.style.border = "2px solid red"; // Highlight the empty field
+                    alert(input.previousElementSibling.innerHTML + " is required.");
+                } else {
+                    input.style.border = "1px solid #ccc"; // Reset the border style
+                }
+        
+                // Email format validation
+                if (input.type === "email" && input.required && !validateEmail(input.value)) {
+                    isValid = false;
+                    input.style.border = "2px solid red";
+                    alert("Please enter a valid email address.");
+                }
+            });
+        
+            // If the form is valid, allow submission
+            if (isValid) {
+                alert("Form submitted successfully!");
+            } else {
+                event.preventDefault(); // Prevent form submission if validation fails
+            }
+        }
+        
+        // Email format validation
+        function validateEmail(email) {
+            var re = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+            return re.test(email);
+        }
+        
+        // Attach validation to forms
+        document.getElementById('feedbackForm').onsubmit = function(event) {
+            event.preventDefault();
+            validateForm('feedbackForm');
+        };
+        
+        document.getElementById('contactForm').onsubmit = function(event) {
+            event.preventDefault();
+            validateForm('contactForm');
+        };
+        
+        document.getElementById('signUpForm').onsubmit = function(event) {
+            event.preventDefault();
+            validateForm('signUpForm');
+        };
+        </script>
+        
 </body>
 </html>

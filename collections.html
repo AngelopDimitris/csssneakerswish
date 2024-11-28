@@ -25,650 +25,209 @@
             <h1>The SneakerSwish</h1> 
         </div>
         <nav>
-            <ul>
+            <ul class="navbar">
                 <li><a href="index.html" class="homepage">Home</a></li>
-                <li><a href="collections.html" class="collectionspage">Collections</a>
+                <li class="dropdown">
+                    <a href="collections.html" class="dropbtn">Collections</a>
+                    <div class="dropdown-content">
+                        <a href="collections.html">Basketball Shoes</a>
+                        <a href="collections.html#LifestyleSneakers">Lifestyle Sneakers</a>
+                    </div>
+                </li>
                 <li><a href="contact.html" class="contactpage">Contact Us</a></li>
                 <li><a href="contact.html" class="SignUpbutton">Sign Up </a></li>
-                <li> <a href="collections.html" class="collectionspage">Basketball Shoes</a></li>
-                <li> <a href="collections.html" class="collectionspage">Lifestyle Sneakers</a></li>
-            </ul>
         </nav>
         <blockquote class="slogan">
             <p>"The Swishiest Sneakers"</p>
         </blockquote>
     </header>
     <main>
-        <section id="BasketballShoes">
             <h2>Basketball Shoes</h2>
             <ul class="releases">
-                <li>
+                <li class="sneakes">
                     <h3>Dame 8</h3>
-                    <img src="Images/dame8.jpg" height="200" width="200" alt="Dame8">
+                    <img src="Images/dame8.jpg" height="200" width="200" alt="Dame8" class="sneaks">
                     <p>Available Sizes: 7,8,9,10,11,12,13,14</p>
                     <p>Price: 111$</p>
-                    <form action="thankyou.html" method="post"></form>
-                    <label for="rating">Reviews:</label>
-                    <p><select id="rating" class="rating" required>
-                    <option value="">Shoe Rate</option>
-                    <option value="1">Excellent</option>
-                    <option value="2">Very Good</option>
-                    <option value="3">Good</option>
-                    <option value="4">Bad</option>
-                    <option value="5">Very Bad</option>
-                    </select>
-                    <input type="submit" value="SubmitReview">
-                    </p>
-                    <p> <form action="thankyou.html" method="post">
-                        <label for="comments">Comments:</label>
-                        <textarea id="comments" class="comments" rows="4" required></textarea>
-                        <input type="submit" value="LeaveComment">
-                        </form>
-                    </p>
+                    <button class="order-btn">Order Now</button>
+                    <div class="overlay" id="overlay"></div>
+
+    <div class="modal" id="orderModal">
+        <h3>Place Your Order</h3>
+        <form id="orderForm">
+            <input type="text" placeholder="Full Name" required>
+            <input type="email" placeholder="Email Address" required>
+            <input type="text" placeholder="Address" required>
+            <select required>
+                <option value="">Select Payment Method</option>
+                <option value="credit">Credit Card</option>
+                <option value="paypal">PayPal</option>
+                <option value="cash">Cash on Delivery</option>
+            </select>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
                     </li>
-                    <li>
+                    <li class="sneakes">
                         <h3>Curry 6</h3>
-                        <img src="Images/Curry6.jpg" height="150" width="200" alt="Curry6">
+                        <img src="Images/Curry6.jpg" height="150" width="200" alt="Curry6" class="sneaks">
                         <p>Available Sizes: 7,8,9,10,11,12,13,14</p>
                         <p>Price: 150$</p>
-                        <form action="thankyou.html" method="post"></form>
-                        <label for="rating">Reviews:</label>
-                        <p><select id="rating1" class="rating" required>
-                            <option value="">Shoe Rate</option>
-                            <option value="1">Excellent</option>
-                            <option value="2">Very Good</option>
-                            <option value="3">Good</option>
-                            <option value="4">Bad</option>
-                            <option value="5">Very Bad</option>
-                            </select>
-                        <input type="submit" value="SubmitReview">
-                    </p>
-                        <p> <form action="thankyou.html" method="post">
-                            <label for="comments">Comments:</label>
-                            <textarea id="comments1" class="comments" rows="4" required></textarea>
-                            <input type="submit" value="LeaveComment">
-                        </form>
-                        </p>
                     </li>
-                    <li> 
+                    <li class="sneakes"> 
                 <h3>KD 17-USA</h3>
-                <img src="Images\Kd17.jpg" height="200" width="200" alt="KD17USA">
+                <img src="Images\Kd17.jpg" height="200" width="200" alt="KD17USA" class="sneaks">
                 <p>Available Sizes: 7,8,9,10,11,12,13,14</p>
-                <p>Price: 125$</p>
-                <form action="thankyou.html" method="post"></form>
-                <label for="rating">Reviews:</label>
-                <p><select id="rating2" class="rating" required>
-                    <option value="">Shoe Rate</option>
-                    <option value="1">Excellent</option>
-                    <option value="2">Very Good</option>
-                    <option value="3">Good</option>
-                    <option value="4">Bad</option>
-                    <option value="5">Very Bad</option>
-                    </select>
-                <input type="submit" value="SubmitReview">
-            </p>
-                <p> <form action="thankyou.html" method="post">
-                    <label for="comments">Comments:</label>
-                    <textarea id="comments2" class="comments" rows="4" required></textarea>
-                    <input type="submit" value="LeaveComment">
-                </form>
-                </p>  
+                <p>Price: 125$</p> 
             </li>
-            <li>
+            <li class="sneakes">
                 <h3>Giannis Immortality 4</h3>
-                <img src="Images/GiannisImmortality4.png" height="200" width="200" alt="Giannis-Immortality-4">
+                <img src="Images/GiannisImmortality4.png" height="200" width="200" alt="Giannis-Immortality-4" class="sneaks">
             <p>Available Sizes: 7,8,9,10,11,12,13,14</p>
             <p>Price: 65.97$</p>
-            <form action="thankyou.html" method="post"></form>
-            <label for="rating">Reviews:</label>
-            <p><select id="rating3" class="rating" required>
-                <option value="">Shoe Rate</option>
-                <option value="1">Excellent</option>
-                <option value="2">Very Good</option>
-                <option value="3">Good</option>
-                <option value="4">Bad</option>
-                <option value="5">Very Bad</option>
-                </select>
-            <input type="submit" value="SubmitReview">
-        </p>
-            <p> <form action="thankyou.html" method="post">
-                <label for="comments">Comments:</label>
-                <textarea id="comments3" name="comments" rows="4" required></textarea>
-                <input type="submit" value="LeaveComment">
-            </form>
-            </p>    
             </li>
-            <li>
+            <li class="sneakes">
                 <h3>Lebron XXI</h3>
-            <img src="Images/LeBronxxi.jpg" height="200" width="200" alt="LebronXXI">
+            <img src="Images/LeBronxxi.jpg" height="200" width="200" alt="LebronXXI" class="sneaks">
             <p>Available Sizes: 7,8,9,10,11,12,13,14</p>
             <p>Price: 127.97$</p>
-            <form action="thankyou.html" method="post"></form>
-            <label for="rating">Reviews:</label>
-            <p><select id="rating4" class="rating" required>
-                <option value="">Shoe Rate</option>
-                <option value="1">Excellent</option>
-                <option value="2">Very Good</option>
-                <option value="3">Good</option>
-                <option value="4">Bad</option>
-                <option value="5">Very Bad</option>
-                </select>
-            <input type="submit" value="SubmitReview">
-            </p>
-            <p> <form action="thankyou.html" method="post">
-                <label for="comments">Comments:</label>
-                <textarea id="comments4" name="comments" rows="4" required></textarea>
-                <input type="submit" value="LeaveComment">
-            </form>
-            </p>    
             </li>
-            <li>
-                <h3>Puma-Lamelo Ball</h3>
-                <img src="Images/LameloPuma.jpg" height="150" width="200" alt="LameloPuma">
-                <p>Available Sizes: 7,8,9,10,11,12,13,14</p>
-                <p>Price: 110$</p>
-                <form action="thankyou.html" method="post"></form>
-                <label for="rating">Reviews:</label>
-                <p><select id="rating5" class="rating" required>
-                <option value="">Shoe Rate</option>
-                <option value="1">Excellent</option>
-                <option value="2">Very Good</option>
-                <option value="3">Good</option>
-                <option value="4">Bad</option>
-                <option value="5">Very Bad</option>
-                </select>
-            <input type="submit" value="SubmitReview">
-        </p>
-            <p> <form action="thankyou.html" method="post">
-                <label for="comments">Comments:</label>
-                <textarea id="comments5" class="comments" rows="4" required></textarea>
-                <input type="submit" value="LeaveComment">
-            </form>
-            </p>    
-            </li>
-            <li>
+            <li class="sneakes">
                 <h3>James Harden 6</h3>
-            <img src="Images/JamesHarden6.png" height="200" width="200" alt="Harden6">
+            <img src="Images/JamesHarden6.png" height="200" width="200" alt="Harden6" class="sneaks">
             <p>Available Sizes: 7,8,9,10,11,12,13,14</p>
             <p>Price: 114$</p>
-            <form action="thankyou.html" method="post"></form>
-            <label for="rating">Reviews:</label>
-            <p><select id="rating6" name="rating" required>
-                <option value="">Shoe Rate</option>
-                <option value="1">Excellent</option>
-                <option value="2">Very Good</option>
-                <option value="3">Good</option>
-                <option value="4">Bad</option>
-                <option value="5">Very Bad</option>
-                </select>
-            <input type="submit" value="SubmitReview">
-           </p>
-            <p> <form action="thankyou.html" method="post">
-                <label for="comments">Comments:</label>
-                <textarea id="comments6" class="comments" rows="4" required></textarea>
-                <input type="submit" value="LeaveComment">
-            </form>
-            </p>    
             </li>
-            <li>
+            <li class="sneakes">
                 <h3>D-Rose 773</h3>
-                <img src="Images/Drose773.jpg" height="200" width="200" alt="D-Rose773">
+                <img src="Images/Drose773.jpg" height="200" width="200" alt="D-Rose773" class="sneaks">
             <p>Available Sizes: 7,8,9,10,11,12,13,14</p>
             <p>Price: 78$</p>
-            <form action="thankyou.html" method="post"></form>
-            <label for="rating">Reviews:</label>
-            <p><select id="rating7" class="rating" required>
-                <option value="">Shoe Rate</option>
-                <option value="1">Excellent</option>
-                <option value="2">Very Good</option>
-                <option value="3">Good</option>
-                <option value="4">Bad</option>
-                <option value="5">Very Bad</option>
-                </select>
-            <input type="submit" value="SubmitReview">
-            </p>
-            <p> <form action="thankyou.html" method="post">
-                <label for="comments">Comments:</label>
-                <textarea id="comments7" class="comments" rows="4" required></textarea>
-                <input type="submit" value="LeaveComment">
-            </form>
-            </p>    
             </li>
-            <li>
+            <li class="sneakes">
                 <h3>Kobe 8</h3>
-                <img src="Images/Kobe8.jpg" height="200" width="200" alt="Kobe8">
+                <img src="Images/Kobe8.jpg" height="200" width="200" alt="Kobe8" class="sneaks">
             <p>Available Sizes: 7,8,9,10,11,12,13,14</p>
             <p>Price: 201$</p>
-            <form action="thankyou.html" method="post"></form>
-            <label for="rating">Reviews:</label>
-            <p><select id="rating8" class="rating" required>
-                <option value="">Shoe Rate</option>
-                <option value="1">Excellent</option>
-                <option value="2">Very Good</option>
-                <option value="3">Good</option>
-                <option value="4">Bad</option>
-                <option value="5">Very Bad</option>
-                </select>
-            <input type="submit" value="SubmitReview">
-        </p>
-            <p> <form action="thankyou.html" method="post">
-                <label for="comments">Comments:</label>
-                <textarea id="comments8" class="comments" rows="4" required></textarea>
-                <input type="submit" value="LeaveComment">
-            </form>
-            </p>    
             </li>
-            <li>
+            <li class="sneakes">
                 <h3>Lebron NXXT</h3>
-                <img src="Images/LebronNXXT.png" height="200" width="200" alt="Lebronnxxt">
+                <img src="Images/LebronNXXT.png" height="200" width="200" alt="Lebronnxxt" class="sneaks">
             <p>Available Sizes: 7,8,9,10,11,12,13,14</p>
             <p>Price: 175$</p>
-            <form action="thankyou.html" method="post"></form>
-            <label for="rating">Reviews:</label>
-            <p><select id="rating9" class="rating" required>
-                <option value="">Shoe Rate</option>
-                <option value="1">Excellent</option>
-                <option value="2">Very Good</option>
-                <option value="3">Good</option>
-                <option value="4">Bad</option>
-                <option value="5">Very Bad</option>
-                </select>
-            <input type="submit" value="SubmitReview">
-        </p>
-            <p> <form action="thankyou.html" method="post">
-                <label for="comments">Comments:</label>
-                <textarea id="comments9" class="comments" rows="4" required></textarea>
-                <input type="submit" value="LeaveComment">
-            </form>
-            </p> 
             </li>
-            <li>
+            <li class="sneakes">
                 <h3>Luka 3</h3>
-                <img src="Images/Luka3.png" height="200" width="200" alt="Luka3">
+                <img src="Images/Luka3.png" height="200" width="200" alt="Luka3" class="sneaks">
             <p>Available Sizes: 7,8,9,10,11,12,13,14</p>
             <p>Price: 130$</p>
-            <form action="thankyou.html" method="post"></form>
-            <label for="rating">Reviews:</label>
-            <p><select id="rating10" class="rating" required>
-                <option value="">Shoe Rate</option>
-                <option value="1">Excellent</option>
-                <option value="2">Very Good</option>
-                <option value="3">Good</option>
-                <option value="4">Bad</option>
-                <option value="5">Very Bad</option>
-                </select>
-            <input type="submit" value="SubmitReview">
-            </p>
-            <p> <form action="thankyou.html" method="post">
-                <label for="comments">Comments:</label>
-                <textarea id="comments10" class="comments" rows="4" required></textarea>
-                <input type="submit" value="LeaveComment">
-            </form>
-            </p> 
             </li>
-            <li>
+            <li class="sneakes">
                 <h3>New Balance V5</h3>
-                <img src="Images/NewBalanceV5.jpg" height="200" width="200" alt="NBV5">
+                <img src="Images/NewBalanceV5.jpg" height="200" width="200" alt="NBV5" class="sneaks">
             <p>Available Sizes: 7,8,9,10,11,12,13,14</p>
             <p>Price: 119.99$</p>
-            <form action="thankyou.html" method="post"></form>
-            <label for="rating">Reviews:</label>
-            <p><select id="rating11" class="rating" required>
-                <option value="">Shoe Rate</option>
-                <option value="1">Excellent</option>
-                <option value="2">Very Good</option>
-                <option value="3">Good</option>
-                <option value="4">Bad</option>
-                <option value="5">Very Bad</option>
-                </select>
-            <input type="submit" value="SubmitReview">
-        </p>
-            <p> <form action="thankyou.html" method="post">
-                <label for="comments">Comments:</label>
-                <textarea id="comments11" class="comments" rows="4" required></textarea>
-                <input type="submit" value="LeaveComment">
-            </form>
-            </p> 
             </li>
-            <li>
+            <li class="sneakes">
                 <h3>Anthony Edwards 1 Low</h3>
-                <img src="Images/AD1Low.jpg" height="200" width="200" alt="AD1Low">
+                <img src="Images/AD1Low.jpg" height="200" width="200" alt="AD1Low" class="sneaks">
             <p>Available Sizes: 7,8,9,10,11,12,13,14</p>
             <p>Price: 221$</p>
-            <form action="thankyou.html" method="post"></form>
-            <label for="rating">Reviews:</label>
-            <p><select id="rating12" class="rating" required>
-                <option value="">Shoe Rate</option>
-                <option value="1">Excellent</option>
-                <option value="2">Very Good</option>
-                <option value="3">Good</option>
-                <option value="4">Bad</option>
-                <option value="5">Very Bad</option>
-                </select>
-            <input type="submit" value="SubmitReview">
-        </p>
-            <p> <form action="thankyou.html" method="post">
-                <label for="comments">Comments:</label>
-                <textarea id="comments12" class="comments" rows="4" required></textarea>
-                <input type="submit" value="LeaveComment">
-            </form>
-            </p>  
             </li>
-            <li>
+            <li class="sneakes">
                 <h3>Giannis Freak 6</h3>
-                <img src="Images/Freak6.png" height="200" width="200" alt="Freak6">
+                <img src="Images/Freak6.png" height="200" width="200" alt="Freak6" class="sneaks">
             <p>Available Sizes: 7,8,9,10,11,12,13,14</p>
             <p>Price: 140$</p>
-            <form action="thankyou.html" method="post"></form>
-            <label for="rating">Reviews:</label>
-            <p><select id="rating13" class="rating" required>
-                <option value="">Shoe Rate</option>
-                <option value="1">Excellent</option>
-                <option value="2">Very Good</option>
-                <option value="3">Good</option>
-                <option value="4">Bad</option>
-                <option value="5">Very Bad</option>
-                </select>
-            <input type="submit" value="SubmitReview">
-        </p>
-            <p> <form action="thankyou.html" method="post">
-                <label for="comments">Comments:</label>
-                <textarea id="comments13" class="comments" rows="4" required></textarea>
-                <input type="submit" value="LeaveComment">
-            </form>
-            </p>  
             </li>
             </ul>
-            <section id="Lifestyle Sneakers">
+            <section id="LifestyleSneakers">
                 <h2>Lifestyle Sneakers</h2>
                 <ul class="releases">
-                    <li>
+                    <li class="sneakes">
                         <h3>Nike Killshot 2</h3>
-                        <img src="Images/Killshot2.png" height="200" width="200" alt="killshot-2">
+                        <img src="Images/Killshot2.png" height="200" width="200" alt="killshot-2" class="sneaks">
                     <p>Available Sizes: 7,8,9,10,11,12,13,14</p>
                     <p>Price: 75.97$</p>
                     <form action="thankyou.html" method="post"></form>
-                    <label for="rating">Reviews:</label>
-                    <p><select id="rating14" class="rating" required>
-                        <option value="">Shoe Rate</option>
-                        <option value="1">Excellent</option>
-                        <option value="2">Very Good</option>
-                        <option value="3">Good</option>
-                        <option value="4">Bad</option>
-                        <option value="5">Very Bad</option>
-                        </select>
-                    <input type="submit" value="SubmitReview">
-                </p>
-                    <p> <form action="thankyou.html" method="post">
-                        <label for="comments">Comments:</label>
-                        <textarea id="comments14" class="comments" rows="4" required></textarea>
-                        <input type="submit" value="LeaveComment">
-                    </form>
-                    </p>    
+
                     </li>
-                    <li>
+                    <li class="sneakes">
                         <h3>New Balance 9060</h3>
-                        <img src="Images/NB9060.webp" height="200" width="200" alt="nb9060">
+                        <img src="Images/NB9060.webp" height="200" width="200" alt="nb9060" class="sneaks">
                     <p>Available Sizes: 7,8,9,10,11,12,13,14</p>
                     <p>Price: 149.90$</p>
-                    <form action="thankyou.html" method="post"></form>
-                    <label for="rating">Reviews:</label>
-                    <p><select id="rating15" name="rating" required>
-                        <option value="">Shoe Rate</option>
-                        <option value="1">Excellent</option>
-                        <option value="2">Very Good</option>
-                        <option value="3">Good</option>
-                        <option value="4">Bad</option>
-                        <option value="5">Very Bad</option>
-                        </select>
-                    <input type="submit" value="SubmitReview">
-                </p>
-                    <p> <form action="thankyou.html" method="post">
-                        <label for="comments">Comments:</label>
-                        <textarea id="comments15" class="comments" rows="4" required></textarea>
-                        <input type="submit" value="LeaveComment">
-                    </form>
-                    </p>  
+ 
                     </li>
-                    <li>
+                    <li class="sneakes">
                         <h3>Rebook Phase Court</h3>
-                        <img src="Images/RebookPhaseCourt.webp" height="200" width="200" alt="rebookphasecourt">
+                        <img src="Images/RebookPhaseCourt.webp" height="200" width="200" alt="rebookphasecourt" class="sneaks">
                     <p>Available Sizes: 7,8,9,10,11,12,13,14</p>
                     <p>Price: 81.99$</p>
-                    <form action="thankyou.html" method="post"></form>
-                    <label for="rating">Reviews:</label>
-                    <p><select id="rating16" class="rating" required>
-                        <option value="">Shoe Rate</option>
-                        <option value="1">Excellent</option>
-                        <option value="2">Very Good</option>
-                        <option value="3">Good</option>
-                        <option value="4">Bad</option>
-                        <option value="5">Very Bad</option>
-                        </select>
-                    <input type="submit" value="SubmitReview">
-                </p>
-                    <p> <form action="thankyou.html" method="post">
-                        <label for="comments">Comments:</label>
-                        <textarea id="comments16" class="comments" rows="4" required></textarea>
-                        <input type="submit" value="LeaveComment">
-                    </form>
-                    </p>  
+   
                     </li>
-                    <li>
+                    <li class="sneakes">
                         <h3>Air Force '07</h3>
-                        <img src="Images/airforce07.png" height="200" width="200" alt="airforce07">
+                        <img src="Images/airforce07.png" height="200" width="200" alt="airforce07" class="sneaks">
                     <p>Available Sizes: 7,8,9,10,11,12,13,14</p>
                     <p>Price: 115$</p>
-                    <form action="thankyou.html" method="post"></form>
-                    <label for="rating">Reviews:</label>
-                    <p><select id="rating17" class="rating" required>
-                        <option value="">Shoe Rate</option>
-                        <option value="1">Excellent</option>
-                        <option value="2">Very Good</option>
-                        <option value="3">Good</option>
-                        <option value="4">Bad</option>
-                        <option value="5">Very Bad</option>
-                        </select>
-                    <input type="submit" value="SubmitReview">
-                </p>
-                    <p> <form action="thankyou.html" method="post">
-                        <label for="comments">Comments:</label>
-                        <textarea id="comments17" name="comments" rows="4" required></textarea>
-                        <input type="submit" value="LeaveComment">
-                    </form>
-                    </p>  
+   
                     </li>
-                    <li>
+                    <li class="sneakes">
                         <h3>Jordan Traviss Scott</h3>
-                        <img src="Images/TravisJordan.jpg" height="200" width="200" alt="travisscott">
+                        <img src="Images/TravisJordan.jpg" height="200" width="200" alt="travisscott" class="sneaks">
                     <p>Available Sizes: 7,8,9,10,11,12,13,14</p>
                     <p>Price: 236$</p>
-                    <form action="thankyou.html" method="post"></form>
-                    <label for="rating">Reviews:</label>
-                    <p><select id="rating18" class="rating" required>
-                        <option value="">Shoe Rate</option>
-                        <option value="1">Excellent</option>
-                        <option value="2">Very Good</option>
-                        <option value="3">Good</option>
-                        <option value="4">Bad</option>
-                        <option value="5">Very Bad</option>
-                        </select>
-                    <input type="submit" value="SubmitReview">
-                </p>
-                    <p> <form action="thankyou.html" method="post">
-                        <label for="comments">Comments:</label>
-                        <textarea id="comments18" class="comments" rows="4" required></textarea>
-                        <input type="submit" value="LeaveComment">
-                    </form>
-                    </p>  
+ 
                     </li>
-                    <li>
+                    <li class="sneakes">
                         <h3>Adidas Black Handball</h3>
-                        <img src="Images/Adidasblackhanball.jpg" height="150" width="250" alt="blackhandball">
+                        <img src="Images/Adidasblackhanball.jpg" height="150" width="250" alt="blackhandball" class="sneaks">
                     <p>Available Sizes: 7,8,9,10,11,12,13,14</p>
                     <p>Price: 164$</p>
-                    <form action="thankyou.html" method="post"></form>
-                    <label for="rating">Reviews:</label>
-                    <p><select id="rating19" class="rating" required>
-                        <option value="">Shoe Rate</option>
-                        <option value="1">Excellent</option>
-                        <option value="2">Very Good</option>
-                        <option value="3">Good</option>
-                        <option value="4">Bad</option>
-                        <option value="5">Very Bad</option>
-                        </select>
-                    <input type="submit" value="SubmitReview">
-                </p>
-                    <p> <form action="thankyou.html" method="post">
-                        <label for="comments">Comments:</label>
-                        <textarea id="comments19" name="comments" rows="4" required></textarea>
-                        <input type="submit" value="LeaveComment">
-                    </form>
-                    </p>  
+  
                     </li>
-                    <li>
+                    <li class="sneakes">
                         <h3>Adidas Gazelle Originals</h3>
-                        <img src="Images/Gazzelleoriginals.webp" height="200" width="200" alt="originals">
+                        <img src="Images/Gazzelleoriginals.webp" height="200" width="200" alt="originals" class="sneaks">
                     <p>Available Sizes: 7,8,9,10,11,12,13,14</p>
                     <p>Price: 99.99$</p>
-                    <form action="thankyou.html" method="post"></form>
-                    <label for="rating">Reviews:</label>
-                    <p><select id="rating20" class="rating" required>
-                        <option value="">Shoe Rate</option>
-                        <option value="1">Excellent</option>
-                        <option value="2">Very Good</option>
-                        <option value="3">Good</option>
-                        <option value="4">Bad</option>
-                        <option value="5">Very Bad</option>
-                        </select>
-                    <input type="submit" value="SubmitReview">
-                </p>
-                    <p> <form action="thankyou.html" method="post">
-                        <label for="comments">Comments:</label>
-                        <textarea id="comments20" class="comments" rows="4" required></textarea>
-                        <input type="submit" value="LeaveComment">
-                    </form>
-                    </p>  
+   
                     </li>
-                    <li>
+                    <li class="sneakes">
                         <h3>Puma Hypnotic</h3>
-                        <img src="Images/Pumahypnotic.jpg" height="200" width="200" alt="pumahypnotic">
+                        <img src="Images/Pumahypnotic.jpg" height="200" width="200" alt="pumahypnotic" class="sneaks">
                     <p>Available Sizes: 7,8,9,10,11,12,13,14</p>
                     <p>Price: 110$</p>
-                    <form action="thankyou.html" method="post"></form>
-                    <label for="rating">Reviews:</label>
-                    <p><select id="rating21" class="rating" required>
-                        <option value="">Shoe Rate</option>
-                        <option value="1">Excellent</option>
-                        <option value="2">Very Good</option>
-                        <option value="3">Good</option>
-                        <option value="4">Bad</option>
-                        <option value="5">Very Bad</option>
-                        </select>
-                    <input type="submit" value="SubmitReview">
-                </p>
-                    <p> <form action="thankyou.html" method="post">
-                        <label for="comments">Comments:</label>
-                        <textarea id="comments21" class="comments" rows="4" required></textarea>
-                        <input type="submit" value="LeaveComment">
-                    </form>
-                    </p>  
+  
                     </li>
-                    <li>
+                    <li class="sneakes">
                         <h3>Stansmith Originals</h3>
-                        <img src="Images/Stansmith.webp" height="200" width="200" alt="stansmith">
+                        <img src="Images/Stansmith.webp" height="200" width="200" alt="stansmith" class="sneaks">
                     <p>Available Sizes: 7,8,9,10,11,12,13,14</p>
                     <p>Price: 84.99$</p>
-                    <form action="thankyou.html" method="post"></form>
-                    <label for="rating">Reviews:</label>
-                    <p><select id="rating22" class="rating" required>
-                        <option value="">Shoe Rate</option>
-                        <option value="1">Excellent</option>
-                        <option value="2">Very Good</option>
-                        <option value="3">Good</option>
-                        <option value="4">Bad</option>
-                        <option value="5">Very Bad</option>
-                        </select>
-                    <input type="submit" value="SubmitReview">
-                </p>
-                    <p> <form action="thankyou.html" method="post">
-                        <label for="comments">Comments:</label>
-                        <textarea id="comments22" class="comments" rows="4" required></textarea>
-                        <input type="submit" value="LeaveComment">
-                    </form>
-                    </p> 
+  
                     </li>
-                    <li>
+                    <li class="sneakes">
                         <h3>Polo Ralph Lauren</h3>
-                        <img src="Images/RalphLauren.webp" height="200" width="200" alt="ralphlauren">
+                        <img src="Images/RalphLauren.webp" height="200" width="200" alt="ralphlauren" class="sneaks">
                     <p>Available Sizes: 7,8,9,10,11,12,13,14</p>
                     <p>Price: 96$</p>
-                    <form action="thankyou.html" method="post"></form>
-                    <label for="rating">Reviews:</label>
-                    <p><select id="rating23" class="rating" required>
-                        <option value="">Shoe Rate</option>
-                        <option value="1">Excellent</option>
-                        <option value="2">Very Good</option>
-                        <option value="3">Good</option>
-                        <option value="4">Bad</option>
-                        <option value="5">Very Bad</option>
-                        </select>
-                    <input type="submit" value="SubmitReview">
-                </p>
-                    <p> <form action="thankyou.html" method="post">
-                        <label for="comments">Comments:</label>
-                        <textarea id="comments24" name="comments" rows="4" required></textarea>
-                        <input type="submit" value="LeaveComment">
-                    </form>
-                    </p> 
+ 
                     </li>
-                    <li>
+                    <li class="sneakes">
                         <h3>New Balance Green</h3>
-                        <img src="Images/NBGreen.jpg" height="200" width="200" alt="nbgreen">
+                        <img src="Images/NBGreen.jpg" height="200" width="200" alt="nbgreen" class="sneaks">
                     <p>Available Sizes: 7,8,9,10,11,12,13,14</p>
                     <p>Price: 89.99$</p>
-                    <form action="thankyou.html" method="post"></form>
-                    <label for="rating">Reviews:</label>
-                    <p><select id="rating25" class="rating" required>
-                        <option value="">Shoe Rate</option>
-                        <option value="1">Excellent</option>
-                        <option value="2">Very Good</option>
-                        <option value="3">Good</option>
-                        <option value="4">Bad</option>
-                        <option value="5">Very Bad</option>
-                        </select>
-                    <input type="submit" value="SubmitReview">
-                </p>
-                    <p> <form action="thankyou.html" method="post">
-                        <label for="comments">Comments:</label>
-                        <textarea id="comments25" class="comments" rows="4" required></textarea>
-                        <input type="submit" value="LeaveComment">
-                    </form>
-                    </p> 
+            
                     </li>
-                    <li>
+                    <li class="sneakes">
                         <h3>Adidas Superstars</h3>
-                        <img src="Images/Superstars.jpg" height="150" width="250" alt="superstars">
+                        <img src="Images/Superstars.jpg" height="150" width="250" alt="superstars" class="sneaks">
                     <p>Available Sizes: 7,8,9,10,11,12,13,14</p>
                     <p>Price: 100$</p>
-                    <form action="thankyou.html" method="post"></form>
-                    <label for="rating">Reviews:</label>
-                    <p><select id="rating26" class="rating" required>
-                        <option value="">Shoe Rate</option>
-                        <option value="1">Excellent</option>
-                        <option value="2">Very Good</option>
-                        <option value="3">Good</option>
-                        <option value="4">Bad</option>
-                        <option value="5">Very Bad</option>
-                        </select>
-                    <input type="submit" value="SubmitReview">
-                </p>
-                    <p> <form action="thankyou.html" method="post">
-                        <label for="comments">Comments:</label>
-                        <textarea id="comments26" class="comments" rows="4" required></textarea>
-                        <input type="submit" value="LeaveComment">
-                    </form>
-                    </p> 
+  
                     </li>
                 </ul>
     </main>
@@ -691,5 +250,57 @@
         <p>&copy; 2024 The SneakerSwish</p>
         <p>Website: <a href="index.html">SneakerSwish.com</a></p>
     </footer>
+    <!-- Modal for displaying larger image -->
+<div id="imageModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modalImage">
+    <div id="caption"></div>
+  </div>
+  <script>
+    // Get modal and elements for interaction
+    var modal = document.getElementById("imageModal");
+    var modalImg = document.getElementById("modalImage");
+    var captionText = document.getElementById("caption");
+    
+    // Get all images in the gallery (with the class 'sneaks')
+    var images = document.querySelectorAll('.sneaks');
+    
+    // Loop through each image and add click event listener to show the modal
+    images.forEach(function(img) {
+      img.onclick = function() {
+        modal.style.display = "block";
+        modalImg.src = this.src;
+        captionText.innerHTML = this.alt;  // Set the caption based on alt text of the image
+      };
+    });
+    
+    // Get the close button to hide the modal
+    var span = document.getElementsByClassName("close")[0];
+    
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+      modal.style.display = "none";
+    };
+    </script> 
+        <script>
+            document.querySelectorAll('.order-btn').forEach(button => {
+                button.addEventListener('click', () => {
+                    document.getElementById('overlay').style.display = 'block';
+                    document.getElementById('orderModal').style.display = 'block';
+                });
+            });
+    
+            document.getElementById('orderForm').addEventListener('submit', function(event) {
+                event.preventDefault();
+                alert('Your order is confirmed!');
+                document.getElementById('overlay').style.display = 'none';
+                document.getElementById('orderModal').style.display = 'none';
+            });
+    
+            document.getElementById('overlay').addEventListener('click', () => {
+                document.getElementById('overlay').style.display = 'none';
+                document.getElementById('orderModal').style.display = 'none';
+            });
+        </script>
 </body>
 </html>
